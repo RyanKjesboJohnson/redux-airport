@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+
 
 function App() {
   const [airlineInput, setAirlineInput] = useState('');
@@ -15,6 +16,8 @@ function App() {
       type: 'ADD_NEW_AIRLINE',
       payload: airlineInput
     })
+
+    setAirlineInput('');
   }
 
   return (
@@ -29,7 +32,23 @@ function App() {
         placeholder="Airline Name" />
         <button>Add Airline</button>
       </form>
-      <table>{/* Airlines should be listed here */}</table>
+      <table>
+        <thead>
+          <tr>
+          <th>Airline Name</th>
+          </tr>
+        </thead>
+        <tbody>
+        {airlineList.map((airline) => {
+            return <tr>
+              <td>{airline}</td>
+            </tr>
+          })
+        }
+
+        </tbody>
+
+      </table>
     </div>
   );
 }
