@@ -1,7 +1,8 @@
-import { useSelector } from "react-redux"
-import { useDispatch } from "react-redux"
+import { useSelector } from "react-redux";
+import React from "react";
 
-export default function () {
+
+function AirlineListFunction() {
     const airlineList = useSelector((store) => store.airlineList)
     console.log(airlineList);
 
@@ -26,3 +27,4 @@ return(
 
       </table>)
 }
+export default AirlineListFunction;

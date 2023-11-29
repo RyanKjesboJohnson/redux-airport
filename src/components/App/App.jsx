@@ -1,7 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
 import Form from '../Form/form';
-import Table from '../Table/Table';
+import AirlineListFunction from '../Table/Table';
 
 
 function App() {
@@ -10,7 +8,7 @@ function App() {
     <div>
       <h1>Redux Airport</h1>
       <Form />
-      <Table />
+      <AirlineListFunction />
       
     </div>
   );
