@@ -10,6 +10,7 @@ import { Provider } from 'react-redux'
 const airlineList = (state=[], action) => {
     if (action.type === 'ADD_NEW_AIRLINE') {
         const newAirline = action.payload
+        console.log(newAirline);
         return [...state, newAirline]
     }
     return state
